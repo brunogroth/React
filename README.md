@@ -18,3 +18,13 @@ Hooks are function that let us hook into the React state (open, close) and lifec
     Ex: useState, useEffect, useContext, useReducer, useRef.
 
 LETS PRACTICE
+
+-> npm create-react-app MyName
+npm start
+
+Using Extension ES7 React/Reduct/GraphQL/... snipets
+rafce + TAB to create an arrow function 
+
+<h1> Hello From React </h1>
+      {/* <h2> Testing everything up. Hold on, {name}! </h2>
+      <h3> 1 + 1 = {x}. {x == 2 ? "It's true." : "Dont trust him. It's False."}</h3> */}
