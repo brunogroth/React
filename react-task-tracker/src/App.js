@@ -6,7 +6,7 @@ const name = "Brad";
 const x = 1+1;
   return (
     <div className="container">
-      <Header title="Hello From React" />
+      <Header title="Task Tracker" />
     </div>
   );
 }
