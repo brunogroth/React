@@ -29,15 +29,12 @@ function App() {
 ])
 
 //Add Task
-
 const addTask = (task) => {
   const id = Math.floor(Math.random() * 10000) +1 // Generating a random ID
   const newTask = { id, ...task}
 
   setTasks ([...tasks, newTask])
 }
-
-
 
 //Delete Task
 const deleteTask = (id) => {
@@ -54,10 +51,10 @@ setTasks(tasks.map((task) => (task.id === id ? {...task, reminder:!task.reminder
       <Header title="Task Tracker" onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
       {showAddTask && <AddTask onAdd={addTask} />} 
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={togglerReminder}/> : <p className="noTasksText">Lazy day! Nothing to show.</p> }
+      <p className="small">* <strong>Double click</strong> to set a Reminder</p>
     </div>
   );
 }
-
 
 //Older way to do it using class:
 // class App extends React.Component{

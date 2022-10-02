@@ -18,9 +18,13 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
   margin-left: 25px;
   margin-right: 25px;
-
+  }
 }
 
 .header {
@@ -113,3 +117,10 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
+
+.small{
+  margin-top: 15px;
+  text-align: end;
+  font-size: 0.75em;
+}
+
