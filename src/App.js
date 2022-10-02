@@ -25,15 +25,24 @@ function App() {
     }
 ])
 
-const name = "Brad";
-const x = 1+1;
+//Delete Task
+const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+}
+
+// Toggle Reminder
+const togglerReminder = (id) => {
+setTasks(tasks.map((task) => (task.id === id ? {...task, reminder:!task.reminder} : task)))
+}
+
   return (
     <div className="container">
       <Header title="Task Tracker" />
-      <Tasks tasks={tasks}/>
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={togglerReminder}/> : "Lazy day! No tasks to show. You should get some rest." }
     </div>
   );
 }
+
 
 //Older way to do it using class:
 // class App extends React.Component{
